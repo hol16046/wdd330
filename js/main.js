@@ -3,6 +3,18 @@ const links = [
     {
         label:'Week 1',
         url: 'week01'
+    },
+    {
+        label:'Week 2',
+        url: 'week02'
+    },
+    {
+        label:'Week 3',
+        url: 'week03'
+    },
+    {
+        label:'Week 4',
+        url: 'week04'
     }
 ];
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale-1'>
+        <title>Form Validation Tutorial</title>
+        <meta name='description' content='Web Dev Simplified: JavaScript Form Validation Tutorial (https://www.youtube.com/watch?v=In0nB0ABaUk)'>
+        <script defer src='script.js'></script>
+        <link rel='stylesheet' href='../../../styles/main.css'>
+    </head>
+    <body>
+        <header>
+            <h1>Form Validation</h1>
+        </header>
+        <div id="error"></div>
+        <form id="form" action="/" method="GET">
+            <div>
+                <label>Name: <input id="name" name="name" type="text"></label>
+            </div>
+            <div>
+                <label>Password: <input id="password" name="password" type="password"></label>
+            </div>
+            <div>
+                <label>Verify Password: <input id="password2" name="password2" type="password"></label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p>A button with <code>type="submit"</code> submits form data to the server by default. A button with <code>type="button"</code>has no default and must be assigned a behavior.</p>
+        <footer>
+            <a href="../code-exercises.html">Back to Week 4 Code Exercises</a>
+        </footer>
+    </body>
+</html>
