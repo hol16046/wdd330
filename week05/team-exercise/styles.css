@@ -1,0 +1,36 @@
+li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header"
+    "main main";
+}
+ul {
+    padding: 0;
+}
+h2 {
+    grid-area: header;
+    text-align: center;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+div {
+    align-self: center;
+    justify-self: left;
+}
+
+h1 {
+    text-align: center;
+    padding: 50px;
+    background-color: gray;
+}
+.image {
+    width: 80%;
+    justify-self: right;
+}
+img {
+    max-width: 80%;
+}
