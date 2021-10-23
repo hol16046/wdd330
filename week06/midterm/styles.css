@@ -1,0 +1,9 @@
+.completedBox {
+    width: 30px;
+    height: 30px;
+    border: 3px solid red;
+}
+
+.completed {
+    border: 1px solid black;
+}
