@@ -6,12 +6,42 @@
 
 .completed {
     border: 1px solid black;
+    padding: 2px;
+}
+
+.completed:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c";
+    font-size: 20px; 
+    color: #000000;
+    text-align: center;
+}
+
+ul#toDoList {
+    list-style: none;
+    padding-left: 0px;
+}
+
+li div.completedBox {
+	display: inline-block;
+}
+
+li p {
+	display: inline;
+	text-align: center;
 }
 
 div.completed + p {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 li div.delete {
-    float: right;
+	float:right;
+}
+
+#container {
+    max-width: 300px;
 }
