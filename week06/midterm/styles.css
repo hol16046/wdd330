@@ -7,3 +7,11 @@
 .completed {
     border: 1px solid black;
 }
+
+div.completed + p {
+    text-decoration: line-through;
+}
+
+li div.delete {
+    float: right;
+}

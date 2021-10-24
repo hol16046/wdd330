@@ -22,7 +22,7 @@ export default class ToDos {
     }
 
     showToDoList() {
-        this.parentElement.innerHTML = '';
+        this.listParent.innerHTML = '';
         renderToDoList(this.listParent, this.getAllTasks());
         renderForm(this.getAllTasks());
         this.addToDoListener(this.getAllTasks());
@@ -32,6 +32,8 @@ export default class ToDos {
         const storedList = this.storage.readToDoList('listStorage');
         if (storedList != null) {
             toDoList = storedList;
+        } else {
+            toDoList = new Array();
         }
         console.log('add task');
         console.log(toDoList);
@@ -102,6 +104,7 @@ export default class ToDos {
         console.log(document.getElementById('addButton'));
         document.getElementById('addButton').addEventListener('click', (event) => {
             this.addToDo(newTaskContent.value);
+        console.log(toDoList);
         });
     }
      
@@ -117,14 +120,15 @@ function renderToDoList(parent, tasks) {
         const checkBox = document.querySelector('.completedBox');
         tasks.forEach(task => {
             parent.appendChild(renderOneTask(task));
-    });
+        });
+    }
 }
 
 function renderOneTask(task) {
     const item = document.createElement('li');
     item.classList.add('task');
     item.setAttribute('data-name', task.content);
-    item.innerHTML = `<div class="completedBox"></div>
+    item.innerHTML = `<div class="completedBox` + (task.completed ? `completed` : ``) + `"></div>
         <p>${task.content}</p>
         <div class="delete">
             <p>X</p>
@@ -138,5 +142,4 @@ function renderForm(list) {
     form.innerHTML = `<textarea name="newTask" id="newTask" placeholder="Enter your task here"></textarea>
         <button type="submit" id="addButton">+</button>`;
     document.getElementById('container').appendChild(form);
-}
 }
